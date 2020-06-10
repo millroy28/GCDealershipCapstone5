@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h3><a href="/Home/ViewInventory">View all inventory</a></h3>
+<h3><a href="/Home/Favorites">Witness the majesty of your favorite cars</a></h3>
+<h3>Or search:</h3>
+
+<form action="/Home/SearchInventory" method="post">
+    <input type="text" name="make" placeholder="Make" />
+    <input type="text" name="model" placeholder="Model" />
+    <input type="text" name="style" placeholder="Style" />
+    <input type="number" name="year" placeholder="Year" />
+    <input type="text" name="color" placeholder="Color" />
+    <input type="number" name="mileage" placeholder="Max Mileage" />
+    <input type="submit" value="Search Inventory" />
+</form>

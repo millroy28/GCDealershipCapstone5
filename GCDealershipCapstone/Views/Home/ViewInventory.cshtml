@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "ViewInventory";
+}
+
+<h1>View Inventory</h1>
+
+
+@model List<Inventory>
+
+<table class="table">
+    <tr>
+        <th>Make</th>
+        <th>Model</th>
+        <th>Style</th>
+        <th>Year</th>
+        <th>Color</th>
+        <th>Mileage</th>
+    </tr>
+    @foreach (var c in Model)
+    {
+        <tr>
+            <td>@c.Make</td>
+            <td>@c.Model</td>
+            <td>@c.Style</td>
+            <td>@c.Year</td>
+            <td>@c.Color</td>
+            <td>@c.Mileage</td>
+            <td><a href="/Home/AddToFavorite?id=@c.Id">Save as Favorite</a></td>
+        </tr>
+    }
+</table>
